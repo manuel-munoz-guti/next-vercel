@@ -1,14 +1,14 @@
+import type { ReactElement } from 'react';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { MainLayout } from '@/components/layouts/MainLayout'
-import type { ReactElement } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function HomePage() {
+export default function PricingPage() {
   return (
     <>
-      <h1> HOME PAGE </h1>
+      <h1> PRICING PAGE </h1>
         <div className={'center'}>
           <Image
             className={'logo'}
@@ -19,14 +19,14 @@ export default function HomePage() {
             priority
           />
         </div>
-    </>
+  </>
   )
 }
 
-HomePage.getLayout = function getLayout( page: ReactElement ) {
-  return (
-      <MainLayout>
-          { page }
-      </MainLayout>
-  );
+PricingPage.getLayout = function getLayout( page: ReactElement ) {
+    return (
+        <MainLayout>
+            { page }
+        </MainLayout>
+    );
 }
